@@ -22,6 +22,10 @@
         linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 }
 
+p {
+    margin-bottom: 0 !important;
+}
+
 a {
 
     text-decoration: none;
@@ -45,6 +49,11 @@ body {
     src: url('alfont_com_alfont_com_frutiger-lt-arabic-65-bold-webfont.woff') format("woff"),
         url('alfont_com_alfont_com_frutiger-lt-arabic-65-bold-webfont.woff2') format('woff2');
 }
+@font-face {
+    font-family: 'ArbicB';
+    src: url('frutiger_lt_arabic_65_bold-webfont.woff') format("woff"),
+        url('frutiger_lt_arabic_65_bold-webfont.woff2') format('woff2');
+}
 
 @font-face {
     font-family: 'RomanB';
@@ -53,7 +62,7 @@ body {
 }
 
 
-
+/* //////////////carousel css Start ///////////////////////////// */
 .carousel-item {
 
     background-size: cover;
@@ -78,7 +87,7 @@ body {
 
 .carousel-caption {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 15%;
     bottom: unset;
     right: unset;
@@ -146,11 +155,36 @@ a.liquid:active::before {
 .Latest-news-sec .lat-main p {
     text-align: justify;
 }
+.lat-body1 {
+    border: none;
+    position: relative;
+}
+.lat-body1::after{
+    position: absolute;
+    content: "";
+    bottom: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: #786642;
+}
+.ser-a{
+    position: relative;
+}
+.ser-a::after{
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    width: 98%;
+    left: 0;
+    height: 1px;
+    background-color: #786642;
+}
 
 .lat-body a {
     width: 180px;
-    font-size: larger;
-    height: 40px;
+    font-size: 18px;
+    height: 30px;
+   padding-top: 4px;
     position: relative;
     text-decoration: none;
     background: #e76a3d;
@@ -176,6 +210,7 @@ a.liquid:active::before {
 }
 
 .view-all {
+    height: 45px !important;
     background: transparent !important;
     color: #786642 !important;
     border: 1px solid #786642 !important;
@@ -222,14 +257,15 @@ a.liquid:active::before {
     }
 }
 
-footer h5 {
+footer h2 {
     font-weight: bolder;
 
     color: #e76a3d;
 }
 
 footer a {
-    font-size: larger;
+    font-size: 30px;
+    font-weight: 500;
     color: #e76a3d !important;
 }
 
@@ -238,73 +274,132 @@ footer a {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+    #project .row {
+        flex-direction: column-reverse;
+    }
+
+    .carousel-item {
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+    }
+
     .mobView i {
+        color: #786642;
+        font-size: 30px !important;
+        font-weight: lighter !important;
         display: unset;
         font-weight: 700;
         font-size: larger;
     }
 
     .mobView {
-
+        padding-top: 10px;
         display: flex;
         align-items: center;
+        position: relative;
         justify-content: space-between;
-        border-bottom: 1px solid;
     }
-}
 
-/* /////////////contact us///////////// */
-.content {
-    padding: 7rem 0;
-}
+    .mobView::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #786642;
+    }
 
-.heading {
-    font-size: 2.5rem;
-    font-weight: 900;
-}
+    footer .ap-icon img {
+        margin-bottom: 10px;
+    }
+    /* ///////////circle/////// */
+    .circle-container .circle-1 {
+        width: 70px !important;
+        height: 70px !important;
+      
+    }
+    .circle-container .circle-1:hover {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    /* Style for the image */
+    .circle-container img {
+        height: 40px;
+    }
+    .circle-text1{
+        font-weight: bold;
+        font-size: 16px !important;
+    }
+    /* //////////circle end////// */
+    #services .hed span{
+        font-size: 20px !important;
+    }
+    #services .hed h2{
+        font-size: 35px !important;
+        font-weight: bolder;
+    }
 
-.form-control {
+}
+.accordion-item{
     border: none;
-    border-bottom: 1px solid #ccc;
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 0;
-    background: none;
+    border-bottom: 1px solid #786642 !important;
 }
-
-.form-control:active,
-.form-control:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-color: #000;
+.accordion-button:focus {
+    background-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
-
-.col-form-label {
-    color: #000;
-    font-size: 13px;
+.accordion-button:not(.collapsed) {
+    background-color: unset !important;
+}
+/* /circle////////// */
+.circle-container {
+    margin-bottom: 80px;
+    position: relative;
 }
 
 
-
-.contact-wrap .col-form-label {
-    font-size: 14px;
-    color: #b3b3b3;
-    margin: 0 0 10px 0;
-    display: inline-block;
-    padding: 0;
+.circle-container .circle-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #c96540;
+    transition: .3s;
 }
-
-
-
-@media (max-width: 1199.98px) {
-    .contact-wrap .contact-info {
-        height: 400px !important;
-    }
+.circle-container .circle-1:hover {
+    width: 130px ;
+    height: 130px ;
 }
-
-.contact-wrap .contact-info h3 {
-    color: #fff;
+.circle-container-1 .circle-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #c96540;
+    transition: .3s;
+}
+.circle-container-1 .circle-1:hover {
+    width: 130px ;
+    height: 130px ;
+}
+/* Style for the text at the bottom */
+.circle-text {
+    position: absolute;
+    bottom: -35px;
     font-size: 20px;
-    margin-bottom: 30px;
-} 
+    color: #786642;
+    transition: .3s;
+}
+.circle-text1{
+    bottom: -70px;
+}
+.circle-container .circle-1:hover .circle-text {
+    font-size: 25px;
+}
+
+.accordion-button::after {
+    display: none;
+}
+
